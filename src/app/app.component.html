@@ -1,26 +1,23 @@
-
 <mat-toolbar>
   <h1>{{title}}</h1>
   <div class="container">
-      <div class = "column d-flex flex-row justify-content-start  ">
-  <a class="m-1" mat-raised-button routerLink="employees" routerLinkActive="active"> List</a>
-  <a class= "m-1" mat-raised-button routerLink="create-employee" routerLinkActive="active">Add</a>
+    <div class="column d-flex flex-row justify-content-start  ">
+      <a class="m-1" mat-raised-button routerLink="employees" routerLinkActive="active"> List</a>
+      <a class="m-1" mat-raised-button routerLink="create-employee" routerLinkActive="active">Add</a>
     </div>
   </div>
 </mat-toolbar>
 
 
-<div class = "container">
-  <div class= "row">
+<div class="container">
+  <div class="row">
     <div class="column p-5 d-flex flex-column justify-content-center aligne-items-center">
-    <router-outlet></router-outlet>
-</div>
-</div>
-</div>
-<footer class = "footer bg-dark d-flex flex-column justify-content-center aligne-items-center">
-    <div class = "container">
-        <span>2022</span>
+      <router-outlet></router-outlet>
     </div>
+  </div>
+</div>
+<footer class="footer bg-dark d-flex flex-column justify-content-center aligne-items-center">
+  <div class="container">
+    <span>2022</span>
+  </div>
 </footer>
-
-

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="column d-flex flex-column justify-content-center align-items-center">
+      <mat-card class="example-card">
+        <mat-card-title>
+          <h3 class="text-center"> Update Employee </h3>
+        </mat-card-title>
+        <mat-card-content>
+          <form class="example-form" [formGroup]="updateEmployeeForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter your name</mat-label>
+              <input text="text" matInput placeholder="name" formControlName="firstName">
+              <div *ngIf="updateEmployeeForm.get('firstName')!.dirty && !updateEmployeeForm.get('firstName')!.valid">
+                <mat-error *ngIf="updateEmployeeForm.invalid"> El nombre debe tener al menos 4 caracteres</mat-error>
+              </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter your lastname</mat-label>
+              <input text="text" matInput placeholder="lastName" formControlName="lastName">
+              <div *ngIf="updateEmployeeForm.get('lastName')!.dirty && !updateEmployeeForm.get('lastName')!.valid">
+                <mat-error *ngIf="updateEmployeeForm.invalid">El apellido debe tener al menos 4 caracteres</mat-error>
+              </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter your email</mat-label>
+              <input email="email" matInput placeholder="pat@example.com" formControlName="emailId">
+              <div>
+                <mat-error *ngIf="updateEmployeeForm.invalid"></mat-error>
+              </div>
+            </mat-form-field>
+            <div class="d-flex justify-content-end align-items-center">
+              <button type=submit mat-raised-button color="primary">Save</button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
